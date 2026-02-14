@@ -1,0 +1,142 @@
+.vision-section {
+    background: var(--bg-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+.vision-bg-pattern {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 10% 80%, rgba(43, 125, 233, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 90% 20%, rgba(232, 168, 56, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.vision-header {
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+    position: relative;
+    z-index: 1;
+}
+
+.vision-label {
+    color: var(--color-secondary) !important;
+}
+
+.vision-label::after {
+    background: var(--color-secondary) !important;
+}
+
+.vision-title {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-white);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--spacing-md);
+    letter-spacing: 0.05em;
+}
+
+.vision-highlight {
+    color: var(--color-secondary);
+}
+
+.vision-subtitle {
+    font-size: var(--font-size-lg);
+    color: rgba(255, 255, 255, 0.6);
+    line-height: var(--line-height-relaxed);
+}
+
+/* Vision Cards */
+.vision-grid {
+    position: relative;
+    z-index: 1;
+}
+
+.vision-card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-xl);
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-normal);
+    overflow: hidden;
+}
+
+.vision-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(232, 168, 56, 0.3);
+    transform: translateY(-4px);
+}
+
+.vision-card-number {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-lg);
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-extrabold);
+    color: rgba(255, 255, 255, 0.04);
+    line-height: 1;
+    pointer-events: none;
+}
+
+.vision-card-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-light) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--color-primary-dark);
+    transition: transform var(--transition-normal);
+}
+
+.vision-card:hover .vision-card-icon {
+    transform: scale(1.1);
+}
+
+.vision-card-title {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    margin-bottom: var(--spacing-xs);
+}
+
+.vision-card-desc {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.6);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .vision-title {
+        font-size: var(--font-size-4xl);
+    }
+
+    .vision-subtitle br {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .vision-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .vision-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}

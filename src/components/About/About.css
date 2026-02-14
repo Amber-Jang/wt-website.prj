@@ -1,0 +1,84 @@
+.about-section {
+    background: var(--bg-primary);
+    position: relative;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+}
+
+.section-label {
+    display: inline-block;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+}
+
+.section-label::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--color-secondary);
+    margin: var(--spacing-sm) auto 0;
+    border-radius: var(--radius-full);
+}
+
+/* Capability Cards */
+.capability-card {
+    text-align: center;
+    border: 1px solid var(--color-gray-200) !important;
+    border-radius: var(--radius-lg) !important;
+    transition: all var(--transition-normal) !important;
+    height: 100%;
+    overflow: hidden;
+}
+
+.capability-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg) !important;
+    border-color: var(--color-accent) !important;
+}
+
+.card-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-lg);
+    font-size: 28px;
+    color: var(--color-white);
+    transition: transform var(--transition-normal);
+}
+
+.capability-card:hover .card-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.card-title {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.card-desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-500);
+    line-height: var(--line-height-relaxed);
+}
+
+@media (max-width: 768px) {
+    .about-cards .ant-col {
+        max-width: 100%;
+    }
+}
