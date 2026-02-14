@@ -130,10 +130,6 @@
 }
 
 @media (max-width: 480px) {
-    .vision-title {
-        font-size: var(--font-size-3xl);
-    }
-
     .vision-card {
         flex-direction: column;
         text-align: center;

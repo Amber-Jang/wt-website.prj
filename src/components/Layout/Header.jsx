@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react';
 import { Layout, Menu, Button, Drawer } from 'antd';
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
 import './Header.css';
+import logoImg from '../../assets/images/logo.png';
 
 const { Header: AntHeader } = Layout;
 
 const navItems = [
     { key: 'hero', label: 'HOME' },
     { key: 'about', label: 'ABOUT US' },
+    { key: 'services', label: 'SERVICES' },
     { key: 'vision', label: 'VISION' },
     { key: 'contact', label: 'CONTACT' },
 ];
@@ -21,7 +23,6 @@ function Header() {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
 
-            // 현재 보이는 섹션 감지
             const sections = navItems.map((item) => item.key);
             for (let i = sections.length - 1; i >= 0; i--) {
                 const el = document.getElementById(sections[i]);
@@ -52,8 +53,7 @@ function Header() {
             <AntHeader className={`site-header ${scrolled ? 'scrolled' : ''}`}>
                 <div className="header-inner container">
                     <div className="logo" onClick={() => scrollTo('hero')}>
-                        <span className="logo-text">Wootec</span>
-                        <span className="logo-accent">Circuit</span>
+                        <img src={logoImg} alt="Wootec Circuit Logo" className="logo-img" />
                     </div>
 
                     <nav className="nav-desktop">

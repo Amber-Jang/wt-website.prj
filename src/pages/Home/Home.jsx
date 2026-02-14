@@ -1,5 +1,6 @@
 import Hero from '../../components/Hero/Hero';
 import About from '../../components/About/About';
+import Services from '../../components/Services/Services';
 import Vision from '../../components/Vision/Vision';
 import Contact from '../../components/Contact/Contact';
 
@@ -8,6 +9,7 @@ function Home() {
         <>
             <Hero />
             <About />
+            <Services />
             <Vision />
             <Contact />
         </>
