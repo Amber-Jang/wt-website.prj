@@ -1,6 +1,7 @@
 import { Button } from 'antd';
 import { ArrowDownOutlined } from '@ant-design/icons';
 import './Hero.css';
+import introImg from '../../assets/images/intro.png';
 
 function Hero() {
     const scrollToAbout = () => {
@@ -11,7 +12,7 @@ function Hero() {
     return (
         <section id="hero" className="hero-section">
             {/* Background overlay */}
-            <div className="hero-bg">
+            <div className="hero-bg" style={{ backgroundImage: `url(${introImg})` }}>
                 <div className="hero-particles">
                     <div className="particle particle-1" />
                     <div className="particle particle-2" />
@@ -24,7 +25,7 @@ function Hero() {
 
             <div className="hero-content container">
                 <div className="hero-badge animate-fade-in">
-                    PCB · SMT 생산 전문
+                    PCB · SMT · ASS'Y 생산 전문
                 </div>
 
                 <h1 className="hero-title">
