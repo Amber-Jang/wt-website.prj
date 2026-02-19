@@ -1,44 +1,39 @@
 /* ============================================================
-   Global Styles — Wootec-Circuit Design System
-   ============================================================
-   CSS Custom Properties는 theme.config.js와 동기화됩니다.
-   향후 Figma MCP 토큰으로 자동 교체될 수 있습니다.
+   Global Styles — Wootec-Circuit Design System (Modern Minimal)
    ============================================================ */
 
-/* ─── Google Fonts: Pretendard ─────────────────────────── */
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
 
-/* ─── CSS Custom Properties (Design Tokens) ────────────── */
 :root {
   /* Colors */
-  --color-primary: #0A2E5C;
-  --color-primary-light: #1A4A8A;
-  --color-primary-dark: #061E3C;
-  --color-secondary: #E8A838;
-  --color-secondary-light: #F0C060;
-  --color-accent: #2B7DE9;
+  --color-primary: #1A1A1A;
+  --color-primary-light: #333333;
+  --color-primary-dark: #111111;
+  --color-secondary: #2BC48B;
+  --color-secondary-light: #4CD9A4;
+  --color-accent: #2BC48B;
 
   --color-white: #FFFFFF;
-  --color-gray-50: #F8F9FA;
-  --color-gray-100: #F1F3F5;
-  --color-gray-200: #E9ECEF;
-  --color-gray-300: #DEE2E6;
-  --color-gray-400: #ADB5BD;
-  --color-gray-500: #868E96;
-  --color-gray-600: #495057;
-  --color-gray-700: #343A40;
-  --color-gray-800: #212529;
+  --color-gray-50: #FAFAFA;
+  --color-gray-100: #F5F5F5;
+  --color-gray-200: #EEEEEE;
+  --color-gray-300: #E0E0E0;
+  --color-gray-400: #BDBDBD;
+  --color-gray-500: #9E9E9E;
+  --color-gray-600: #757575;
+  --color-gray-700: #424242;
+  --color-gray-800: #1A1A1A;
   --color-black: #0D0D0D;
 
-  --color-success: #27AE60;
+  --color-success: #2BC48B;
   --color-warning: #F2994A;
   --color-error: #EB5757;
-  --color-info: #2B7DE9;
+  --color-info: #2BC48B;
 
   --bg-primary: #FFFFFF;
-  --bg-secondary: #F8F9FA;
-  --bg-dark: #0A2E5C;
-  --bg-overlay: rgba(10, 46, 92, 0.85);
+  --bg-secondary: #FAFAFA;
+  --bg-dark: #111111;
+  --bg-overlay: rgba(17, 17, 17, 0.85);
 
   /* Typography */
   --font-family: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -50,10 +45,10 @@
   --font-size-lg: 1.125rem;
   --font-size-xl: 1.25rem;
   --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
-  --font-size-5xl: 3rem;
-  --font-size-6xl: 3.75rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+  --font-size-5xl: 3.25rem;
+  --font-size-6xl: 4rem;
   --font-size-7xl: 4.5rem;
 
   --font-weight-light: 300;
@@ -63,7 +58,7 @@
   --font-weight-bold: 700;
   --font-weight-extrabold: 800;
 
-  --line-height-tight: 1.2;
+  --line-height-tight: 1.15;
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.75;
 
@@ -75,8 +70,8 @@
   --spacing-xl: 2rem;
   --spacing-2xl: 3rem;
   --spacing-3xl: 4rem;
-  --spacing-4xl: 5rem;
-  --spacing-5xl: 7.5rem;
+  --spacing-4xl: 6rem;
+  --spacing-5xl: 8rem;
 
   /* Border Radius */
   --radius-sm: 4px;
@@ -87,11 +82,10 @@
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
-  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.15);
-  --shadow-glow: 0 0 30px rgba(43, 125, 233, 0.3);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 24px 48px rgba(0, 0, 0, 0.12);
 
   /* Transitions */
   --transition-fast: 0.15s ease;
@@ -99,18 +93,11 @@
   --transition-slow: 0.5s ease;
 
   /* Layout */
-  --max-width: 1200px;
+  --max-width: 1240px;
   --header-height: 72px;
 }
 
-/* ─── Reset & Base ──────────────────────────────────────── */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 html {
   font-size: 16px;
@@ -129,50 +116,38 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
+a { color: inherit; text-decoration: none; transition: color var(--transition-fast); }
+img { max-width: 100%; height: auto; display: block; }
+ul, ol { list-style: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
-a:hover {
-  color: var(--color-accent);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-ul, ol {
-  list-style: none;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  font-family: inherit;
-}
-
-/* ─── Utility Classes ───────────────────────────────────── */
+/* Utility */
 .container {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 var(--spacing-lg);
+  padding: 0 var(--spacing-xl);
 }
 
 .section {
   padding: var(--spacing-5xl) 0;
 }
 
+.section-label {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-secondary);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-lg);
+}
+
 .section-title {
   font-family: var(--font-family-heading);
   font-size: var(--font-size-4xl);
   font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
+  color: var(--color-gray-800);
   margin-bottom: var(--spacing-md);
   line-height: var(--line-height-tight);
 }
@@ -184,133 +159,47 @@ button {
   line-height: var(--line-height-relaxed);
 }
 
-.text-gradient {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+.text-gradient { color: var(--color-primary); }
 
-/* ─── Scrollbar Styling ─────────────────────────────────── */
-::-webkit-scrollbar {
-  width: 8px;
-}
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-gray-300); border-radius: var(--radius-full); }
 
-::-webkit-scrollbar-track {
-  background: var(--color-gray-100);
-}
+::selection { background: var(--color-secondary); color: var(--color-white); }
 
-::-webkit-scrollbar-thumb {
-  background: var(--color-gray-400);
-  border-radius: var(--radius-full);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-gray-500);
-}
-
-/* ─── Selection ─────────────────────────────────────────── */
-::selection {
-  background: var(--color-accent);
-  color: var(--color-white);
-}
-
-/* ─── Animations ────────────────────────────────────────── */
+/* Animations */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
 @keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
 }
-
 @keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+.animate-fade-in-up { animation: fadeInUp 0.7s ease-out forwards; }
+.animate-fade-in { animation: fadeIn 0.7s ease-out forwards; }
+.animate-slide-in-left { animation: slideInLeft 0.7s ease-out forwards; }
+.animate-slide-in-right { animation: slideInRight 0.7s ease-out forwards; }
 
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
-}
-
-.animate-slide-in-left {
-  animation: slideInLeft 0.6s ease-out forwards;
-}
-
-.animate-slide-in-right {
-  animation: slideInRight 0.6s ease-out forwards;
-}
-
-/* ─── Responsive ────────────────────────────────────────── */
+/* Responsive */
 @media (max-width: 768px) {
-  :root {
-    --header-height: 60px;
-  }
-
-  .section {
-    padding: var(--spacing-3xl) 0;
-  }
-
-  .section-title {
-    font-size: var(--font-size-3xl);
-  }
-
-  .container {
-    padding: 0 var(--spacing-md);
-  }
+  :root { --header-height: 60px; }
+  .section { padding: var(--spacing-3xl) 0; }
+  .section-title { font-size: var(--font-size-3xl); }
+  .container { padding: 0 var(--spacing-lg); }
 }
 
 @media (max-width: 480px) {
-  .section-title {
-    font-size: var(--font-size-2xl);
-  }
-
-  .section-subtitle {
-    font-size: var(--font-size-md);
-  }
+  .section-title { font-size: var(--font-size-2xl); }
+  .section-subtitle { font-size: var(--font-size-md); }
 }

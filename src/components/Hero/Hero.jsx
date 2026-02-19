@@ -1,4 +1,3 @@
-import { Button } from 'antd';
 import { ArrowDownOutlined } from '@ant-design/icons';
 import './Hero.css';
 import introImg from '../../assets/images/intro.png';
@@ -11,70 +10,36 @@ function Hero() {
 
     return (
         <section id="hero" className="hero-section">
-            {/* Background overlay */}
-            <div className="hero-bg" style={{ backgroundImage: `url(${introImg})` }}>
-                <div className="hero-particles">
-                    <div className="particle particle-1" />
-                    <div className="particle particle-2" />
-                    <div className="particle particle-3" />
-                    <div className="particle particle-4" />
-                    <div className="particle particle-5" />
+            {/* Top: White area with text */}
+            <div className="hero-top">
+                <div className="container hero-top-content animate-fade-in-up">
+                    <span className="hero-eyebrow">Wootec Circuit</span>
+                    <h1 className="hero-title">
+                        PCB 개발부터 조립까지
+                    </h1>
+                    <p className="hero-subtitle">
+                        원스톱 토탈 솔루션으로<br />
+                        항상 최상의 품질과 서비스를 약속합니다
+                    </p>
                 </div>
-                <div className="hero-gradient" />
             </div>
 
-            <div className="hero-content container">
-                <div className="hero-badge animate-fade-in">
-                    PCB · SMT · ASS'Y 생산 전문
+            {/* Bottom: Dark image overlay with keywords */}
+            <div className="hero-bottom">
+                <div className="hero-bg" style={{ backgroundImage: `url(${introImg})` }}>
+                    <div className="hero-overlay" />
                 </div>
-
-                <h1 className="hero-title">
-                    <span className="hero-title-main animate-fade-in-up">우텍써키트</span>
-                    <span className="hero-title-eng animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-                        Wootec-Circuit
-                    </span>
-                </h1>
-
-                <p className="hero-subtitle animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                    원스톱 토탈 솔루션으로<br />
-                    항상 최상의 품질과 서비스를 약속합니다
-                </p>
-
-                <div className="hero-cta animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                    <Button type="primary" size="large" className="hero-btn-primary" onClick={scrollToAbout}>
-                        회사 소개 보기
-                    </Button>
-                    <Button
-                        size="large"
-                        className="hero-btn-secondary"
-                        onClick={() => {
-                            const el = document.getElementById('contact');
-                            if (el) el.scrollIntoView({ behavior: 'smooth' });
-                        }}
-                    >
-                        문의하기
-                    </Button>
-                </div>
-
-                <div className="hero-stats animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-                    <div className="stat-item">
-                        <span className="stat-label">ONE STOP</span>
-                        <span className="stat-value">TOTAL SOLUTION</span>
-                    </div>
-                    <div className="stat-divider" />
-                    <div className="stat-item">
-                        <span className="stat-label">HIGH QUALITY</span>
-                        <span className="stat-value">PCB · SMT</span>
-                    </div>
-                    <div className="stat-divider" />
-                    <div className="stat-item">
-                        <span className="stat-label">TRUST</span>
-                        <span className="stat-value">& GROWTH</span>
+                <div className="container hero-bottom-content animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                    <span className="hero-bottom-label">PCB · SMT · ASS'Y 생산 전문</span>
+                    <div className="hero-keywords">
+                        <div className="hero-keyword">다품종 소량 생산</div>
+                        <div className="hero-keyword">품질 관리</div>
+                        <div className="hero-keyword">합리적인 단가 및 납기</div>
                     </div>
                 </div>
             </div>
 
-            <button className="scroll-indicator" onClick={scrollToAbout} aria-label="Scroll down">
+            <button className="scroll-indicator animate-fade-in" style={{ animationDelay: '0.5s' }} onClick={scrollToAbout} aria-label="Scroll down">
                 <ArrowDownOutlined className="scroll-arrow" />
             </button>
         </section>

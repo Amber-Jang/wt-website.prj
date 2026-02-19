@@ -37,32 +37,26 @@ const visionItems = [
 function Vision() {
     return (
         <section id="vision" className="vision-section section">
-            <div className="vision-bg-pattern" />
             <div className="container">
                 <div className="vision-header">
-                    <span className="section-label vision-label">VISION</span>
+                    <span className="section-label vision-label">2026 BUSINESS GOALS</span>
                     <h2 className="vision-title">
-                        ONE STOP<br />
-                        <span className="vision-highlight">TOTAL SOLUTION</span>
+                        믿고 맡기면 끝나는<br />
+                        <span className="vision-highlight">원스톱 토탈 솔루션</span>
                     </h2>
-                    <p className="vision-subtitle">
-                        SMT 전문 회사로서 최상의 품질과 서비스를 제공하며,<br />
-                        고객의 신뢰를 바탕으로 끊임없이 성장합니다.
-                    </p>
+                    <p className="vision-subtitle">체계적인 생산 공정으로 최상의 품질을 보장합니다</p>
                 </div>
 
-                <Row gutter={[32, 32]} className="vision-grid">
+                <Row gutter={[48, 48]} className="vision-grid">
                     {visionItems.map((item, index) => (
                         <Col xs={24} sm={12} key={index}>
                             <div className="vision-card">
-                                <div className="vision-card-number">{item.number}</div>
-                                <div className="vision-card-icon">
-                                    {item.icon}
-                                </div>
+                                <div className="vision-card-icon">{item.icon}</div>
                                 <div className="vision-card-content">
                                     <h3 className="vision-card-title">{item.title}</h3>
                                     <p className="vision-card-desc">{item.desc}</p>
                                 </div>
+                                <span className="vision-card-number">{item.number}</span>
                             </div>
                         </Col>
                     ))}

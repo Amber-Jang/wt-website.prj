@@ -1,10 +1,9 @@
-import { Row, Col, Card } from 'antd';
+import { Row, Col } from 'antd';
 import {
-    SafetyCertificateOutlined,
-    ThunderboltOutlined,
     ToolOutlined,
     GlobalOutlined,
-    CalendarOutlined,
+    ThunderboltOutlined,
+    SafetyCertificateOutlined,
 } from '@ant-design/icons';
 import './About.css';
 import company0 from '../../assets/images/company0.png';
@@ -36,89 +35,91 @@ const capabilities = [
     },
 ];
 
-const historyItems = [
-    { year: '2012.05', title: '우텍써키트 설립', desc: '부천 소재 창업' },
-    { year: '2016.03', title: '안양 이전', desc: 'SMT 1개 라인 도입' },
-    { year: '2017.11', title: '군포 이전', desc: '한림 벤처타운 이전, SMT 라인 추가 도입 (N2 적용)' },
+const stats = [
+    { number: '13+', label: '년 업력' },
+    { number: '2', label: 'SMT 라인' },
+    { number: 'N2', label: '적용 설비' },
 ];
 
 function About() {
     return (
         <section id="about" className="about-section section">
             <div className="container">
-                <div className="about-content-wrapper">
-                    <div className="about-text-content">
-                        <span className="section-label">ABOUT US</span>
-                        <h2 className="section-title">
-                            우텍써키트를<br />
-                            <span className="text-gradient">소개합니다</span>
-                        </h2>
-                        <p className="section-subtitle">
-                            SMT 전문 회사로서 고객과 직원으로부터 신뢰를 받을 수 있는 기업으로 성장하고 있습니다.
-                            최첨단 설비와 축적된 기술력을 바탕으로 고객의 니즈를 만족시키는 최상의 파트너가 되겠습니다.
-                        </p>
-                    </div>
-                    <div className="about-image-content">
-                        <img src={company0} alt="우텍써키트 전경" className="about-main-image" />
-                    </div>
+                <span className="section-label">ABOUT US</span>
+                <div className="about-header">
+                    <h2 className="about-heading">
+                        고객과 직원으로부터 신뢰를 받는<br />
+                        기업으로 성장합니다
+                    </h2>
                 </div>
 
-                <Row gutter={[24, 24]} className="about-cards">
+                <Row gutter={[48, 48]} className="about-cards">
                     {capabilities.map((item, index) => (
                         <Col xs={24} sm={12} lg={6} key={index}>
-                            <Card className="capability-card" hoverable>
-                                <div className="card-icon-wrapper">
-                                    {item.icon}
-                                </div>
+                            <div className="capability-card">
+                                <div className="card-icon">{item.icon}</div>
                                 <h3 className="card-title">{item.title}</h3>
                                 <p className="card-desc">{item.desc}</p>
-                            </Card>
+                            </div>
                         </Col>
                     ))}
                 </Row>
 
-                {/* Company History */}
-                <div className="about-history">
-                    <h3 className="history-title">
-                        <CalendarOutlined className="history-title-icon" />
-                        회사 연혁
-                    </h3>
-                    <div className="history-timeline">
-                        {historyItems.map((item, index) => (
-                            <div key={index} className="history-item">
-                                <div className="history-dot" />
-                                <div className="history-year">{item.year}</div>
-                                <div className="history-content">
-                                    <h4 className="history-item-title">{item.title}</h4>
-                                    <p className="history-item-desc">{item.desc}</p>
-                                </div>
+                <div className="about-divider" />
+
+                <div className="about-intro">
+                    <div className="about-intro-image">
+                        <img src={company0} alt="우텍써키트 전경" />
+                        <div className="about-intro-overlay">
+                            <span className="about-overlay-label">OUR VISION</span>
+                            <p className="about-intro-overlay-text">
+                                내 제품을 만든다는 생각으로<br />
+                                생산 파트너가 되어드리겠습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="about-stats">
+                        {stats.map((stat, index) => (
+                            <div key={index} className="about-stat-item">
+                                <span className="about-stat-number">{stat.number}</span>
+                                <span className="about-stat-label">{stat.label}</span>
                             </div>
                         ))}
                     </div>
                 </div>
 
+                <div className="about-history">
+                    <h3 className="about-history-title">HISTORY</h3>
+                    <div className="history-list">
+                        <div className="history-row">
+                            <span className="history-year">2012.05</span>
+                            <span className="history-desc">우텍써키트 설립 (부천)</span>
+                        </div>
+                        <div className="history-row">
+                            <span className="history-year">2016.03</span>
+                            <span className="history-desc">안양 이전, SMT 1개 라인 도입</span>
+                        </div>
+                        <div className="history-row">
+                            <span className="history-year">2017.11</span>
+                            <span className="history-desc">군포 한림 벤처타운 이전, SMT 라인 추가 도입 (N2 적용)</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="about-gallery">
-                    <h3 className="gallery-title">보유 설비 및 전경</h3>
                     <Row gutter={[16, 16]}>
                         <Col xs={24} sm={12} md={6}>
-                            <div className="gallery-item">
-                                <img src={company1} alt="공장 전경" loading="lazy" />
-                            </div>
+                            <div className="gallery-item"><img src={company1} alt="공장 전경" loading="lazy" /></div>
                         </Col>
                         <Col xs={24} sm={12} md={6}>
-                            <div className="gallery-item">
-                                <img src={company2} alt="SMT 설비" loading="lazy" />
-                            </div>
+                            <div className="gallery-item"><img src={company2} alt="SMT 설비" loading="lazy" /></div>
                         </Col>
                         <Col xs={24} sm={12} md={6}>
-                            <div className="gallery-item">
-                                <img src={company3} alt="생산 라인" loading="lazy" />
-                            </div>
+                            <div className="gallery-item"><img src={company3} alt="생산 라인" loading="lazy" /></div>
                         </Col>
                         <Col xs={24} sm={12} md={6}>
-                            <div className="gallery-item">
-                                <img src={company4} alt="검사 장비" loading="lazy" />
-                            </div>
+                            <div className="gallery-item"><img src={company4} alt="검사 장비" loading="lazy" /></div>
                         </Col>
                     </Row>
                 </div>

@@ -13,11 +13,11 @@ function Footer() {
                 <div className="footer-content">
                     <div className="footer-brand">
                         <div className="footer-logo">
-                            <span className="logo-text">Wootec</span>
-                            <span className="logo-accent">Circuit</span>
+                            <span className="footer-logo-text">Wootec</span>
+                            <span className="footer-logo-accent">Circuit</span>
                         </div>
                         <p className="footer-desc">
-                            PCB·SMT 생산 전문 기업<br />
+                            PCB · SMT · ASS'Y 생산 전문 기업<br />
                             원스톱 토탈 솔루션
                         </p>
                     </div>
@@ -39,7 +39,7 @@ function Footer() {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>© {currentYear} Wootec-Circuit. All rights reserved.</p>
+                    <p>&copy; {currentYear} Wootec-Circuit. All rights reserved.</p>
                 </div>
             </div>
         </AntFooter>

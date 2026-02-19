@@ -7,11 +7,10 @@ import logoImg from '../../assets/images/logo.png';
 const { Header: AntHeader } = Layout;
 
 const navItems = [
-    { key: 'hero', label: 'HOME' },
-    { key: 'about', label: 'ABOUT US' },
-    { key: 'services', label: 'SERVICES' },
-    { key: 'vision', label: 'VISION' },
-    { key: 'contact', label: 'CONTACT' },
+    { key: 'about', label: '회사 소개' },
+    { key: 'services', label: '사업 영역' },
+    { key: 'vision', label: '생산 과정 / 설비' },
+    { key: 'contact', label: '가격 정책' },
 ];
 
 function Header() {
@@ -67,6 +66,10 @@ function Header() {
                             </button>
                         ))}
                     </nav>
+
+                    <button className="header-cta" onClick={() => scrollTo('contact')}>
+                        견적 문의하기
+                    </button>
 
                     <Button
                         className="menu-toggle"

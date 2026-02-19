@@ -13,12 +13,12 @@
 export const designTokens = {
     // ─── Colors ──────────────────────────────────────────
     colors: {
-        primary: '#0A2E5C',        // 메인 네이비 블루
-        primaryLight: '#1A4A8A',   // 밝은 네이비
-        primaryDark: '#061E3C',    // 어두운 네이비
-        secondary: '#E8A838',      // 골드/액센트
-        secondaryLight: '#F0C060', // 밝은 골드
-        accent: '#2B7DE9',         // 포인트 블루
+        primary: '#1A1A1A',        // 메인 다크
+        primaryLight: '#333333',   // 밝은 다크
+        primaryDark: '#111111',    // 어두운 다크
+        secondary: '#2BC48B',      // 그린 포인트
+        secondaryLight: '#4CD9A4', // 밝은 그린
+        accent: '#2BC48B',         // 포인트 그린
 
         // Neutrals
         white: '#FFFFFF',
@@ -34,16 +34,16 @@ export const designTokens = {
         black: '#0D0D0D',
 
         // Semantic
-        success: '#27AE60',
+        success: '#2BC48B',
         warning: '#F2994A',
         error: '#EB5757',
-        info: '#2B7DE9',
+        info: '#2BC48B',
 
         // Background
         bgPrimary: '#FFFFFF',
         bgSecondary: '#F8F9FA',
-        bgDark: '#0A2E5C',
-        bgOverlay: 'rgba(10, 46, 92, 0.85)',
+        bgDark: '#111111',
+        bgOverlay: 'rgba(17, 17, 17, 0.85)',
     },
 
     // ─── Typography ──────────────────────────────────────
@@ -122,7 +122,7 @@ export const designTokens = {
         md: '0 4px 6px rgba(0, 0, 0, 0.07)',
         lg: '0 10px 25px rgba(0, 0, 0, 0.1)',
         xl: '0 20px 50px rgba(0, 0, 0, 0.15)',
-        glow: '0 0 30px rgba(43, 125, 233, 0.3)',
+        glow: '0 0 30px rgba(43, 196, 139, 0.3)',
     },
 
     // ─── Transitions ─────────────────────────────────────
