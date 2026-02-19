@@ -3,9 +3,8 @@ import './Hero.css';
 import introImg from '../../assets/images/intro.png';
 
 function Hero() {
-    const scrollToAbout = () => {
-        const el = document.getElementById('about');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
+    const scrollDown = () => {
+        window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
     };
 
     return (
@@ -39,7 +38,7 @@ function Hero() {
                 </div>
             </div>
 
-            <button className="scroll-indicator animate-fade-in" style={{ animationDelay: '0.5s' }} onClick={scrollToAbout} aria-label="Scroll down">
+            <button className="scroll-indicator animate-fade-in" style={{ animationDelay: '0.5s' }} onClick={scrollDown} aria-label="Scroll down">
                 <ArrowDownOutlined className="scroll-arrow" />
             </button>
         </section>

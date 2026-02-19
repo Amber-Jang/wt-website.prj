@@ -161,6 +161,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .text-gradient { color: var(--color-primary); }
 
+.page-content {
+  padding-top: var(--header-height);
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
