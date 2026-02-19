@@ -10,7 +10,7 @@ const { Header: AntHeader } = Layout;
 const navItems = [
     { key: '/about', label: '회사 소개' },
     { key: '/services', label: '사업 영역' },
-    { key: '/vision', label: '생산 과정 / 설비' },
+    { key: '/vision', label: '생산 과정' },
 ];
 
 function Header() {
