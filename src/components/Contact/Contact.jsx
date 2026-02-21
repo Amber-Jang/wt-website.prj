@@ -19,9 +19,12 @@ function Contact() {
             <div className="container">
                 <span className="section-label">CONTACT</span>
                 <h2 className="contact-heading">
-                    문의사항이 있으시면<br />
-                    연락주세요
+                    문의사항이 있으시면 연락주세요.
                 </h2>
+                <p className="contact-sub">
+                    프로젝트 상담부터 양산까지<br />
+                    신속하게 대응해드립니다.
+                </p>
 
                 <div className="contact-grid">
                     {contactInfo.map((item, index) => (

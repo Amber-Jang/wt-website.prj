@@ -48,9 +48,13 @@ function About() {
                 <span className="section-label">ABOUT US</span>
                 <div className="about-header">
                     <h2 className="about-heading">
-                        고객과 직원으로부터 신뢰를 받는<br />
-                        기업으로 성장합니다
+                        고객 신뢰를 최우선 가치로 삼는<br />
+                        PCB·SMT 전문 제조 기업입니다.
                     </h2>
+                    <p className="about-header-desc">
+                        다년간의 실장 경험과 축적된 노하우를 바탕으로<br />
+                        안정적인 생산 품질을 제공합니다.
+                    </p>
                 </div>
 
                 <Row gutter={[48, 48]} className="about-cards">

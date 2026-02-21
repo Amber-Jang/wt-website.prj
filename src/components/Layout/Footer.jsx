@@ -17,8 +17,8 @@ function Footer() {
                             <span className="footer-logo-accent">Circuit</span>
                         </div>
                         <p className="footer-desc">
-                            PCB · SMT · ASS'Y 생산 전문 기업<br />
-                            원스톱 토탈 솔루션
+                            PCB · SMT · ASSY 생산 전문 기업<br />
+                            신뢰 기반의 파트너십으로 함께 성장합니다.
                         </p>
                     </div>
 

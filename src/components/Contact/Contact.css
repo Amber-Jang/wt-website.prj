@@ -6,6 +6,13 @@
     font-weight: var(--font-weight-bold);
     color: var(--color-gray-800);
     line-height: var(--line-height-tight);
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-sub {
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-500);
+    line-height: var(--line-height-relaxed);
     margin-bottom: var(--spacing-3xl);
 }
 
