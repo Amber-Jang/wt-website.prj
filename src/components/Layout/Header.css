@@ -59,7 +59,7 @@
 .nav-desktop {
     display: flex;
     align-items: center;
-    gap: var(--spacing-2xl);
+    gap: var(--spacing-3xl);
     height: 100%;
     line-height: normal;
 }
