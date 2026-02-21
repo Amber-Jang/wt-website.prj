@@ -32,6 +32,56 @@
     line-height: var(--line-height-relaxed);
 }
 
+/* Process Section */
+.vision-section .process-section {
+    text-align: center;
+    margin-bottom: var(--spacing-4xl);
+}
+
+.vision-section .process-flow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+.vision-section .process-step {
+    flex: 1;
+    max-width: 180px;
+    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-sm);
+}
+
+.vision-section .process-step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--color-secondary);
+    background: transparent;
+    color: var(--color-secondary);
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-md);
+}
+
+.vision-section .process-step-title {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    margin-bottom: var(--spacing-xs);
+}
+
+.vision-section .process-step-desc {
+    font-size: var(--font-size-xs);
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
 /* Vision Cards */
 .vision-card {
     display: flex;
@@ -88,6 +138,8 @@
 
 @media (max-width: 768px) {
     .vision-title { font-size: var(--font-size-4xl); }
+    .vision-section .process-flow { flex-wrap: wrap; }
+    .vision-section .process-step { min-width: 120px; }
 }
 
 @media (max-width: 480px) {

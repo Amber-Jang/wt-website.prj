@@ -14,12 +14,12 @@ function Hero() {
                 <div className="container hero-top-content animate-fade-in-up">
                     <span className="hero-eyebrow">Wootec Circuit</span>
                     <h1 className="hero-title">
-                        PCB 설계부터 SMT·ASSY까지
+                        PCB 설계부터 조립까지
+                        <span className="sr-only"> - 우텍써키트 PCB·SMT·ASSY 생산 전문</span>
                     </h1>
                     <p className="hero-subtitle">
-                        ONE-STOP TOTAL MANUFACTURING SOLUTION<br />
-                        정밀한 기술력과 체계적인 생산 시스템으로<br />
-                        고품질 PCB 실장 서비스를 제공합니다.
+                        원스톱 토탈 솔루션으로<br />
+                        항상 최상의 품질과 서비스를 약속합니다
                     </p>
                 </div>
             </div>

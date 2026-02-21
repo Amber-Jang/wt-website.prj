@@ -92,7 +92,9 @@
 .hero-keywords {
     display: flex;
     align-items: flex-start;
-    gap: var(--spacing-3xl);
+    gap: var(--spacing-xl);
+    width: 100%;
+    max-width: 960px;
 }
 
 .hero-keyword-item {
@@ -138,7 +140,7 @@
 
 @media (max-width: 960px) {
     .hero-title { font-size: var(--font-size-4xl); }
-    .hero-keywords { gap: var(--spacing-xl); }
+    .hero-keywords { gap: var(--spacing-lg); max-width: 100%; }
     .hero-keyword { font-size: var(--font-size-md); }
     .hero-bottom { height: 340px; }
 }
