@@ -3,7 +3,7 @@ import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { Layout, Menu, Button, Drawer } from 'antd';
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
 import './Header.css';
-import logoImg from '../../assets/images/logo.png';
+import logoImg from '../../assets/images/logo.svg';
 
 const { Header: AntHeader } = Layout;
 
